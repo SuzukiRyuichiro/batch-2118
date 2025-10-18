@@ -15,7 +15,6 @@ describe '#fetch_movies_url' do
   end
 end
 
-
 describe '#scrape_movie' do
   it 'should scrape an individual movie page and return information about the movie' do
     expected = {
@@ -26,15 +25,8 @@ describe '#scrape_movie' do
       year: 2008
     }
 
-    actual = scrape_movie("https://www.imdb.com/title/tt0468569")
+    actual = scrape_movie('https://www.imdb.com/title/tt0468569')
 
     expect(actual).to eq(expected)
   end
 end
-
-
-#   title = doc.search("h1").text
-#   year = doc.search(".ipc-inline-list__item")[4].text.to_i
-#   summary = doc.search('.sc-466bb6c-0').text
-#   director = doc.search('.ipc-metadata-list__item:contains("Director") a').first.text
-#   cast = doc.search('.ipc-metadata-list__item:contains("Stars") a.ipc-metadata-list-item__list-content-item').map { |element| element.text }.uniq
