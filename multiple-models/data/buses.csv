@@ -1,0 +1,5 @@
+id,capacity,route_number,accessible
+1,2,420,true
+2,10,218,false
+3,20,218,true
+4,15,100,false
