@@ -11,7 +11,6 @@ class MealRepository
   end
 
   def all
-    puts csv_file_path
     @meals
   end
 
