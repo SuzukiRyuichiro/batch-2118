@@ -7,7 +7,7 @@ class MealsView
 
   def ask_user_for(stuff)
     puts "#{stuff.capitalize}?"
-    print "> "
-    return gets.chomp
+    print '> '
+    gets.chomp
   end
 end

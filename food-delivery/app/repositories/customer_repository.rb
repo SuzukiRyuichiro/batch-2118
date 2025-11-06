@@ -1,5 +1,5 @@
-require "csv"
-require_relative "../models/customer"
+require 'csv'
+require_relative '../models/customer'
 
 class CustomerRepository
   def initialize(csv_file)
@@ -27,7 +27,7 @@ class CustomerRepository
   private
 
   def save_csv
-    CSV.open(@csv_file, "wb") do |csv|
+    CSV.open(@csv_file, 'wb') do |csv|
       csv << %w[id name address]
       @customers.each do |customer|
         csv << [customer.id, customer.name, customer.address]

@@ -1,4 +1,4 @@
-require_relative "../views/sessions_view"
+require_relative '../views/sessions_view'
 
 class SessionsController
   def initialize(employee_repository)
