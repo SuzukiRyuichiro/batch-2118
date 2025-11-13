@@ -1,6 +1,6 @@
 <h1>Restaurants list</h1>
 <ul>
   <% @restaurants.each do |restaurant| %>
-    <li><%= restaurant.name %> 🏠 <%= restaurant.address %></li>
+    <li><%= restaurant.name %> 🏠 <%= restaurant.address %> <a href="<%= "/restaurants/#{restaurant.id}" %>">See detail</a></li>
   <% end %>
 </ul>
