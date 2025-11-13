@@ -8,5 +8,15 @@ get '/' do
 end
 
 get '/restaurants' do
-  'TODO: list all the restaurants in the DB'
+  @restaurants = Restaurant.all
+
+  erb :index
+end
+
+get '/restaurants/:id' do
+  id = params[:id]
+  # Get the restaurant instance with the given ID (from DB)
+  @restaurant = Restaurant.find(id)
+  # render the restaurant details (ERB / View)
+  erb :show
 end
