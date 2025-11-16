@@ -50,7 +50,7 @@ A process through which changes are made to the database structure/schema, such 
 
 rake db:migrate
 
-````
+```
 
 - Complete the following migrations to create your e-library database.
 
