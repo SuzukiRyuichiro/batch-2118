@@ -13,7 +13,7 @@
   display: flex;
   background-color: white;
   gap: 20px;
-  width: 650px;
+  max-width: 650px;
 }
 
 .card-product img {
@@ -39,6 +39,10 @@
 .card-trip {
   max-width: 800px;
   box-shadow: 2px 2px 20px;
+}
+
+.card-trip img {
+  width: 100%;
 }
 
 .card-trip-details {
