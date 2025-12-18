@@ -23,28 +23,38 @@
     <script src="javascript/application.js" type="module"></script>
   </head>
   <body>
-    <div class="app-container">
+    <div class="app-container" data-controller="gifts">
       <h1 class="text-center my-4">🎁🎄 Christmas List 🎄🎁</h1>
 
       <hr class="divider my-5" />
 
       <h3>Your list 🎁</h3>
-      <ol id="list">
-      </ol>
+
+      <ol id="list" data-gifts-target="list"></ol>
 
       <hr class="divider my-5" />
 
       <h2>Add a new item</h2>
 
-      <form class="mb-3">
+      <form class="mb-3" data-action="submit->gifts#addGiftItem">
         <div class="d-flex gap-5 align-items-end">
           <div class="flex-grow-1">
             <label for="name" class="form-label">Name</label>
-            <input id="name" type="text" class="form-control" />
+            <input
+              id="name"
+              type="text"
+              class="form-control"
+              data-gifts-target="name"
+            />
           </div>
           <div class="flex-grow-1">
             <label for="price" class="form-label">Price</label>
-            <input id="price" type="number" class="form-control" />
+            <input
+              id="price"
+              type="number"
+              class="form-control"
+              data-gifts-target="price"
+            />
           </div>
         </div>
         <button type="submit" class="btn btn-success w-100 mt-3">Submit</button>
@@ -57,7 +67,9 @@
       <form class="mb-3">
         <div class="d-flex gap-5 align-items-end">
           <div class="w-100">
-            <label for="search" class="form-label">What would you like to search for?</label>
+            <label for="search" class="form-label"
+              >What would you like to search for?</label
+            >
             <select id="search" class="form-select">
               <option value="electronics">Electronics</option>
               <option value="jewelery">Jewelery</option>
